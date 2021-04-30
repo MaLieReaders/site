@@ -150,7 +150,7 @@ template {
   font-display: swap;
 }
 html {
-  font-family: Roboto Slab, 'Noto Serif SC', PingFang SC, '更纱黑体', 'Sarasa Gothic', Seguo UI, Microsoft Yahei, 'Microsoft Jhenghei', Lantinghei SC, 'lanting', Arial;
+  font-family: 'Noto Serif SC', '思源宋体', 'The-Serif', 'Sarasa Gothic', '更纱黑体', PingFang SC, Seguo UI, Microsoft Yahei, 'Microsoft Jhenghei', Lantinghei SC, 'lanting', Arial;
 }
 html::-webkit-scrollbar {
   width: 8px;
@@ -242,7 +242,7 @@ a:hover {
   height: 4rem;
   width: 100%;
   text-align: center;
-  line-height: 4rem;
+  line-height: 2rem;
   padding-top: 2em;
 }
 @charset "utf-8";
