@@ -150,7 +150,7 @@ template {
   font-display: swap;
 }
 html {
-  font-family: 'Microsoft Jhenghei', Lantinghei SC, 'lanting', PingFang SC, Seguo UI, Microsoft Yahei, Arial;
+  font-family: Roboto Slab, 'Noto Serif SC', PingFang SC, '更纱黑体', 'Sarasa Gothic', Seguo UI, Microsoft Yahei, 'Microsoft Jhenghei', Lantinghei SC, 'lanting', Arial;
 }
 html::-webkit-scrollbar {
   width: 8px;
