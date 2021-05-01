@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Raindrop Effect</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #root {
+            /* background-image: url("./Background-1.jpg"); */
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            /* transition:left 0.01s, right 0.01s; */
+        }
+        #canvas {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <div id="root">
+        <canvas id="canvas"></canvas>
+    </div>
+    <script>
+        const canvas = document.querySelector("#canvas");
+        // const root = document.getElementById("root");
+        const rect = canvas.getBoundingClientRect();
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+        // root.style.width = `${rect.width*1.05}px`;
+        // root.style.height = `${rect.height*1.05}px`;
+        const raindropFx = new RaindropFX({
+            canvas: canvas,
+            background: "./84765992_p0.jpg"
+        });
+        raindropFx.start();
+        window.onresize = () =>
+        {
+            const rect = canvas.getBoundingClientRect();
+            // root.style.width = `${rect.width*1.05}px`;
+            // root.style.height = `${rect.height*1.05}px`;
+            raindropFx.resize(rect.width, rect.height);
+        }
+        // document.addEventListener("mousemove",t=>{
+        //     root.style.left=(-t.pageX/20).toString()+"px";
+        //     root.style.top=(-t.pageY/20).toString()+"px";
+        // });
+    </script>
+</body>
+</html>
