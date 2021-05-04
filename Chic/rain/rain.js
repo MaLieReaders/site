@@ -7,11 +7,14 @@ const raindropFx = new RaindropFX({
     background: "./84765992_p0.jpg"
 });
 raindropFx.start();
+let Crd={x:0,y:0}
 window.onresize = ()=>{
     const rect = canvas.getBoundingClientRect();
-    raindropFx.resize(rect.width*1.05, rect.height*1.05);
+    console.log(`${Crd.x} ${Crd.y} ${rect.width} ${rect.height}`);
+    Crd.x=Math.min(Crd.x,rect.width);
+    Crd.y=Math.min(Crd.y,rect.height);
+    raindropFx.resize(rect.width*1.07, rect.height*1.07);
 }
-let Crd={x:0,y:0}
 document.addEventListener('mousemove',t=>Crd={x:t.pageX,y:t.pageY})
 class Cursor{
     constructor(tar){
